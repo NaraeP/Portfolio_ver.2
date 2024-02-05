@@ -83,15 +83,15 @@
                         안녕하세요! 배움을 즐기는 신입 개발자 박나래입니다.<br>
                         생각을 현실로 구현할 수 있다는 개발의 매력에 빠져 개발자를 꿈꾸게 되었습니다.<br>
                         사용자를 고려하는 웹 개발자가 되기 위해 모든 것에 호기심을 갖고 공부하며 하나하나 제대로 익히고 사용하려고 노력하고 있습니다.<br>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae aliquid ad provident aut fuga animi soluta quae eos non cupiditate voluptates dolorem, doloremque quos dicta quibusdam impedit iure nemo a iste 
-                        <br>culpa! Quasi quibusdam hic recusandae delectus velit officiis explicabo voluptatibus! Nemo esse similique, voluptates labore distinctio, placeat explicabo facilis molestias, blanditiis culpa iusto voluptatem ratione eligendi a, quia temporibus velit vero ipsa sint ex voluptatum expedita aliquid! Debitis, nam!              
+                        <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae aliquid ad provident aut fuga animi soluta quae eos non cupiditate voluptates dolorem, doloremque quos dicta quibusdam impedit iure nemo a iste 
+                        <br>culpa! Quasi quibusdam hic recusandae delectus velit officiis explicabo voluptatibus! Nemo esse similique, voluptates labore distinctio, placeat explicabo facilis molestias, blanditiis culpa iusto voluptatem ratione eligendi a, quia temporibus velit vero ipsa sint ex voluptatum expedita aliquid! Debitis, nam! -->
                     </p>
-                    <button class="btn-rounded btn btn-outline-primary mt-4">Download a PDF</button>
+                    <button class="btn-rounded btn btn-outline-primary mt-4" onclick="getPdf()">Download a PDF</button>
                 </div>              
             </div><!-- end of about wrapper -->
 
             <!-- CV wrapper -->
-            <h2 class="section-title mb-3">CV</h2>
+            <!-- <h2 class="section-title mb-3">CV</h2>
 
             <h6>Profile</h6>
             <p>Name: 박나래</p>
@@ -116,7 +116,7 @@
             <p>도심공항에서 수속 업무를 담당하며 CLI부터 GUI까지 여러 항공사의 프로그램을 사용하였습니다. 그동안의 프로그램 사용으로 축적된 경험을 통해 프로그래밍에 흥미를 갖기 시작하였습니다.</p>
 
             <p><span>2015.09 - 2017.01</span> 인천국제공항 여객운송업무</p>
-            <p>인천국제공항에서 근무하며 수속 카운터에서 고객과의 직접적인 대면부터 출항을 위한 업무까지 전반적인 여객운송업무를 담당하였습니다. 하나의 비행기를 출항시키기 위해 여러 부서와 협업하는 과정을 경험하며 동료간의 의사소통과 협업의 중요성에 대해 배웠습니다.</p>
+            <p>인천국제공항에서 근무하며 수속 카운터에서 고객과의 직접적인 대면부터 출항을 위한 업무까지 전반적인 여객운송업무를 담당하였습니다. 하나의 비행기를 출항시키기 위해 여러 부서와 협업하는 과정을 경험하며 동료간의 의사소통과 협업의 중요성에 대해 배웠습니다.</p> -->
 
 
 
@@ -483,5 +483,11 @@
     <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
 
+    <!-- Script -->
+    <script>
+        function getPdf() {
+            window.open('https://drive.google.com/file/d/1RH16zNgjRonISA1FOsw6_2CGefaDzbHs/view?usp=drive_link', '_blank')
+        }
+    </script>
 </body>
 </html>
