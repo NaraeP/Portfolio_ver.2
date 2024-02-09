@@ -666,6 +666,13 @@ pre code {
   padding: 15px;
 }
 
+/* Skills CSS by narae */
+.col-md-6.col-lg-4 {
+  position: relative;
+  width: 100%;
+  padding: 15px;
+}
+
 .col {
   -webkit-flex-basis: 0;
       -ms-flex-preferred-size: 0;
@@ -11170,12 +11177,17 @@ p {
   border-radius: 100px;
 }
 
+/* Edit Skills CSS by narae */
 .service-card {
   position: relative;
   min-height: 230px;
   border: 1px solid #dee2e6;
   overflow: hidden;
   border-radius: 3px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .service-card .body {
@@ -12270,4 +12282,15 @@ pre .code {
 
 .section-lg {
   padding: 100px 0 !important;
+}
+
+/* Skills CSS by narae */
+.img-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.img-box img {
+  max-width: 100%;
 }
