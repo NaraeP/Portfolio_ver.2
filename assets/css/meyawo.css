@@ -11441,6 +11441,14 @@ p {
   border-radius: 50%;
 }
 
+.testimonial-card-circle {
+  padding: 4px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #695AA6;
+}
+
 .testimonial-card-body {
   text-align: left;
   border: 1px solid #dee2e6;
@@ -11451,7 +11459,8 @@ p {
 
 .testimonial-card-title {
   margin-top: 20px;
-  font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1300 - 300)));
+  /* font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1300 - 300))); */
+  font-size: calc(18px + (35 - 18) * ((100vw - 300px) / (1300 - 300)));
 }
 
 /* blog wrapper */
@@ -12301,4 +12310,25 @@ pre .code {
 
 .img-box img {
   max-width: 100%;
+}
+
+/* Contact CSS by narae */
+.contact-card {
+  position: relative;
+  min-height: 230px;
+  border: 1px solid #dee2e6;
+  overflow: hidden;
+  border-radius: 3px;
+  padding: 10px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-around; */
+}
+
+.contact-card .icon-box {
+  margin: 20px;
+}
+
+.contact-card .icon-box img {
+  width: 60px;
 }
