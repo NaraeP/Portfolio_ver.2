@@ -673,6 +673,10 @@ pre code {
   padding: 15px;
 }
 
+.col-md-6.col-lg-2 {
+  padding: 0 5px;
+}
+
 .col {
   -webkit-flex-basis: 0;
       -ms-flex-preferred-size: 0;
@@ -11185,9 +11189,13 @@ p {
   overflow: hidden;
   border-radius: 3px;
   padding: 10px;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-around; */
+}
+
+.service-card p {
+  margin: 5px;
 }
 
 .service-card .body {
