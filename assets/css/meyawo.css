@@ -66,8 +66,19 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
 .font-suit {
   font-family: 'SUIT-Regular';
+}
+
+.font-pretendard {
+  font-family: 'Pretendard-Regular';
 }
 
 .font-emphasis {
@@ -12135,7 +12146,28 @@ pre .code {
   background-position: center center;
 }
 
-.header .overlay {
+.portfolio-header {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.header .overlay, .portfolio-header .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -12331,4 +12363,159 @@ pre .code {
 
 .contact-card .icon-box img {
   width: 60px;
+}
+
+/* Portfolio separated page CSS by narae */
+/* Project Section */
+.overview-section {
+  background: linear-gradient(to top, #fff 0%, rgba(105, 90, 166, 0.35) 99%, rgba(105, 90, 166, 0.5) 100%);
+  padding-top: 100px;
+  height: 100vh;
+  min-height: 600px;
+}
+
+.overview-header {
+  font-size: 2.4rem;
+  font-weight: 800;
+  opacity: .8;
+  color: #212529;
+}
+
+.vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 0;
+}
+
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  /* border: 1px solid #34b7a7; */
+  border: 1px solid #999;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  /* background-color: #34b7a7; */
+  background-color: #999;
+}
+
+.portfolio-details .portfolio-info {
+  /* padding: 30px; */
+  padding: 20px;
+  box-shadow: 0px 0 30px rgba(34, 34, 34, 0.08);
+  border-radius: 5px;
+}
+
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.portfolio-details .portfolio-info ul li+li {
+  margin-top: 10px;
+}
+
+/* padding 수정 by narae */
+.portfolio-details .portfolio-description {
+  /* padding-top: 30px; */
+  padding: 30px 20px 0 20px;
+}
+
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-description p {
+  padding: 0;
+}
+
+/* Add CSS by narae */
+.project-desc {
+  padding-top: 30px;
+  width: 100%;
+}
+
+/* function slider CSS by narae */
+.function-swiper-pagination {
+  text-align: center;
+}
+
+table.functions th {
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+table.functions tr td {
+  width: 50%;
+}
+
+table.functions td {
+  padding-top: 10px;
+}
+
+table.functions img {
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #e1e1e1; /*색바꾸기 */
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #49cbbb;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
 }
