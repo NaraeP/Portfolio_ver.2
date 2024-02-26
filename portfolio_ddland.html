@@ -13,92 +13,516 @@
 
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    
+    <!-- GLightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
     <!-- Bootstrap + Meyawo main styles -->
 	<link rel="stylesheet" href="assets/css/meyawo.css">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
     <!-- Style -->
     <style>
+        /* Font */
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        /* Dropdown hover */
+        .dropdown-toggle:hover .dropdown-menu {
+            display: block;
+        }
+        
+        /* Swiper */
+        .swiper-slide > img {
+            max-width: 100%;
+        }
+
         /* Portfolio CSS edit by narae */
-        .header {
-            background-image: none;
+        .overview-section h1, h2, h3, h4, h5, h6 {
+            font-family: 'Pretendard-Regular';
+        }
+
+        /* 프로젝트 상단 요약 */
+        .portfolio-info span {
+        color: red;
+        }
+
+        /* 주요 구현 기능 */
+        table.functions tr {
+        padding: 10px;
+        }
+
+        table.functions th {
+        text-align: center;
+        }
+
+        table.functions tr td {
+        width: 50%;
+        }
+
+        table.functions img {
+        max-width: 100%;
+        }
+
+
+        /* 산출물 img */
+        /* .row {
+        max-width: 100%;
+        }
+
+        .row > img {
+        width: 25%;
+        } */
+
+        #docs tr {
+        padding: 10px;
+        }
+
+        #docs th {
+        text-align: center;
+        }
+
+        #docs tr {
+        border-bottom: 1px solid #999;
+        }
+
+        #docs tr:last-child, #docs tr:nth-child(5) {
+        border-bottom: 0;
+        }
+
+        #docs tr:nth-child(5) > th:first-child {
+        border-bottom: 1px solid #999;
+        }
+
+        #docs th, #docs td {
+        border-right: 1px solid #999;
+        }
+
+        #docs th:last-child, #docs td:last-child {
+        border-right: 0;
+        }
+
+        #docs img {
+        max-width: 100%;
+        }
+
+        /* 빈칸 border 제거 */
+        #docs tr:nth-child(5) > th:nth-child(2) {
+        border-right: 0;
+        }
+        
+        #docs tr:nth-child(6) > td:nth-child(2) {
+        border-right: 0;
+        }
+
+
+        /* 개발 과정 img */
+        #process tr {
+        padding: 10px;
+        }
+
+        #process th {
+        text-align: center;
+        }
+
+        #process tr:first-child {
+        border-bottom: 1px solid #999;
+        }
+
+        #process th, #process td {
+        border-right: 1px solid #999;
+        }
+
+        #process th:last-child, #process td:last-child {
+        border-right: 0;
+        }
+
+        #process img {
+        max-width: 100%;
         }
     </style>
 </head>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-
-    <!-- Page Navbar -->
-    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
-        <div class="container">
-            <a class="logo" href="#">I'm Narae</a>         
-            <ul class="nav">
-                <li class="item">
-                    <a class="link" href="#home">Home</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#about">About</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#testmonial">Testmonial</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#blog">Blog</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#contact">Contact</a>
-                </li>
-                <li class="item ml-md-3">
-                    <a href="components.html" class="btn btn-primary">Components</a>
-                </li>
-            </ul>
-            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
-                <div class="hamburger-box">
-                  <div class="hamburger-inner"></div>
+    <main>
+        <!-- Project Overview Section -->
+        <section class="overview-section font-suit">
+            <div class="container">
+                <div class="portfolio-description">
+                    <h2 class="overview-header font-suit">DD Land(놀이공원 웹사이트)</h2>
+                    <!-- <p></p> -->
                 </div>
-            </a>
-        </div>          
-    </nav><!-- End of Page Navbar -->
-
-    <!-- page header -->
-    <header id="home" class="portfolio-header">
-        <div class="overlay"></div>
-        <div class="header-content container col-lg-8">
-            <h1 class="header-title">DD Land(놀이공원 웹사이트)</h1>
-            <div class="portfolio-details-slider swiper">
-                <div class="swiper-wrapper align-items-center">
-                    <div class="swiper-slide">
-                        <img src="assets/imgs/portfolio/ddland/DDLand_main.png" alt="">
+                <div class="row">
+                    <div class="col-lg-6">
+            
+                        <div class="portfolio-info">
+                        <h3>Project information</h3>
+                        <ul>
+                            <li><strong>프로젝트명</strong>: DD Land</li>
+                            <li><strong>분류</strong>: Spring Project</li>
+                            <li><strong>주제</strong>: Spring Framework를 활용하여 제작한 놀이공원 웹사이트입니다. Servlet/JSP Project로 제작한 웹사이트를 기반으로 기존대비 향상된 관리자/사용자 인터페이스를 제공합니다.</li>
+                            <li><strong>개발 환경</strong>: HTML, CSS, JavaScript, jQuery, JSP, Java, Oracle Database 11g, <span>Spring Tool Suite 3</span>, Bootstrap, SQL Developer, DBeaver, eXERD, Draw.io, Google Drive, Git, GitHub, Sourcetree, <span>AWS(EC2)</span>, Apache Tomcat</li>
+                            <li><strong>사용 기술</strong>: <span>Spring MVC Pattern</span>, <span>Spring Security</span>, <span>Ajax</span>, <span>Open API</span>, MyBatis, <span>Elasticsearch</span>, <span>Web Socket</span>, Modal, <span>Restful API</span>, Tiles</li>
+                            <li><strong>주요 기능</strong>: 액티비티·샵·티켓·할인·커뮤니티·이용 안내 등 조회 기능, 어트랙션 예약 기능, 어트랙션 추천 기능, 티켓 및 기프트샵 상품 구매 기능, 채팅 기능, 관리자 기능</li>
+                            <li><strong>담당 업무</strong>: 액티비티(어트랙션, 영화, 페스티벌, 포토존) 사용자/관리자 기능, Elasticsearch 검색 기능, AWS 배포</li>
+                            <li><strong>획득 역량</strong>: <span>Elasticsearch를 이용한 검색 기능</span>, <span>AWS 배포</span></li>
+                            <li><strong>벤치마킹</strong>: 롯데월드 웹사이트</li>
+                            <li><strong>프로젝트 기간</strong>: 2023.12.18 ~ 2023.12.27 (10일)</li>
+                            <li><strong>GitHub</strong>: <a href="https://github.com/NaraeP/dd-land" target="_blank">https://github.com/NaraeP/dd-land</a></li>
+                            <!-- <li><strong>URL</strong>: <a href="#">www.example.com</a></li> -->
+                        </ul>
+                        </div>
                     </div>
+
+                    <div class="col-lg-6 vertical-center">
+                        <div>
+                            <div class="portfolio-details-slider swiper">
+                                <div class="swiper-wrapper align-items-center">
+                                    <div class="swiper-slide">
+                                        <img src="assets/imgs/portfolio/ddland/DDLand_main.png" alt="">
+                                    </div>
                     
-                    <div class="swiper-slide">
-                        <img src="assets/imgs/portfolio/ddland/DDLand_main.png" alt="">
+                                    <div class="swiper-slide">
+                                        <img src="assets/imgs/portfolio/ddland/Attraction_운영.png" alt="">
+                                    </div>
+                    
+                                    <div class="swiper-slide">
+                                        <img src="assets/imgs/portfolio/ddland/Attraction_운휴.png" alt="">
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <img src="assets/imgs/portfolio/ddland/어트랙션detail.png" alt="">
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <img src="assets/imgs/portfolio/ddland/어트랙션detail2.png" alt="">
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <img src="assets/imgs/portfolio/ddland/어트랙션detail3.png" alt="">
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <img src="assets/imgs/portfolio/ddland/어트랙션예약.png" alt="">
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <img src="assets/imgs/portfolio/ddland/Festival_list.png" alt="">
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <img src="assets/imgs/portfolio/ddland/Movie_list.png" alt="">
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <img src="assets/imgs/portfolio/ddland/Movie_theater_list.png" alt="">
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <img src="assets/imgs/portfolio/ddland/Photozone_list.png" alt="">
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <img src="assets/imgs/portfolio/ddland/Admin_Attraction_list.png" alt="">
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <img src="assets/imgs/portfolio/ddland/Admin_attraction_add.png" alt="">
+                                    </div>
+
+                                </div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-                <div class="swiper-pagination"></div>
-            </div>
+            </div>       
+        </section><!-- end of project overview section -->
 
-        </div>              
-    </header><!-- end of page header -->
+        <!-- Project Detail Section -->
+        <section>
+            <div class="container">
+                <!-- 기획 배경 -->
+                <div class="project-desc">
+                    <h3>기획 배경</h3>
+                    <ol>
+                        <li><strong>어트랙션 예약</strong>: 방문 당일 희망 시간에 미리 어트랙션을 예약하여 놀이공원 방문객의 편의성 추구</li>
+                        <li><strong>놀이기구 및 코스 추천</strong>: 개개인의 성향에 맞게 놀이기구 또는 코스를 추천하여 새로운 즐거움 추구</li>
+                        <li><strong>기프트샵 판매 물품 구매</strong>: 별도 놀이공원 방문 없이도 공원 내 기프트샵의 판매 물품을 온라인으로 구매 가능하도록하여 이용자 편의성 및 접근성 향상</li>
+                        <li><strong>MVC Model 및 디자인 패턴 적용</strong>: 효과적인 설계를 위해 디자인 패턴 활용, 계층을 분리하여 유지보수성과 확장성 확보</li>
+                    </ol>
+                </div>
     
-    <!-- footer -->
-    <div class="container">
-        <footer class="footer">       
-            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com">DevCRUD</a></p>
-            <div class="social-links text-right m-auto ml-sm-auto">
-                <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>
-                <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>
-                <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
-                <a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>
-                <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>
-                <a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>
-            </div>
-        </footer>
-    </div> <!-- end of page footer -->
-	
+                <!-- 구현 목표 -->
+                <div class="project-desc">
+                    <h3>구현 목표</h3>
+                    <ol>
+                        <li>
+                        <strong>사용자 친화적인 디자인 제공</strong>
+                        <ul>
+                            <li>회원/관리자 페이지 구분하여 별도 분리</li>
+                            <li>반응형 웹을 활용한 모바일 최적화 제공</li>
+                        </ul>
+                        </li>
+                        <li>
+                        <strong>Web Socket 및 Open API 활용</strong>
+                        <ul>
+                            <li>사용자들간의 실시간 소통을 위해 Web Socket을 활용하여 채팅 기능 구현</li>
+                            <li>Open API를 사용하여 외부 데이터를 통한 다양한 정보 제공</li>
+                        </ul>
+                        </li>
+                        <li>
+                        <strong>Spring Security를 활용하여 인증 및 권한 부여</strong>
+                        <ul>
+                            <li>Spring Security를 활용하여 회원/관리자별 권한 부여</li>
+                        </ul>
+                        </li>
+                        <li>
+                        <strong>Elasticsearch 활용</strong>
+                        <ul>
+                            <li>Elasticsearch를 활용하여 검색 기능 구현</li>
+                        </ul>
+                        </li>
+                    </ol>
+                </div>
+        
+                <!-- 업무 분담 -->
+                <div class="project-desc">
+                    <h3>업무 분담</h3>
+                    <ul>
+                        <li>김형우: 요금/혜택, 로그인</li>
+                        <li><strong>박나래: 액티비티</strong></li>
+                        <li>이승원: 추천, 월드컵</li>
+                        <li>이정은: 이용가이드, 운휴, 채팅</li>
+                        <li>차민재: 샵, 티켓</li>
+                        <li>차수민: 커뮤니티</li>
+                        <li>황주원: 마이페이지</li>
+                    </ul>
+                </div>
+                    
+                <!-- 주요 구현 기능 -->
+                <div class="project-desc">
+                    <h3>주요 구현 기능</h3>
+        
+                    <div class="function-slider swiper">
+                        <div class="swiper-wrapper align-items-center">
+                            <div class="swiper-slide">
+                                <table ble class="functions">
+                                    <tr>
+                                    <th colspan="2">Activity - Attraction 목록 조회 페이지</th>
+                                    </tr>
+                                    <tr>
+                                    <td><img src="assets/imgs/portfolio/ddland/Attraction_운영.png" alt=""></td>
+                                    <td>
+                                        <ul>
+                                        <li>시스템 날짜 기준, 금일 운영중인 어트랙션 목록을 조회할 수 있는 페이지입니다.</li>
+                                        <li>서버에서 보낸 데이터를 jsp 파일에서 가공하여 출력하였습니다.</li>
+                                        </ul>
+                                    </td>
+                                    </tr>
+                                </table>
+                            </div>
+            
+                            <div class="swiper-slide">
+                                <table class="functions">
+                                    <tr>
+                                    <th colspan="2">Activity - Attraction 목록 조회 페이지</th>
+                                    </tr>
+                                    <tr>
+                                    <td><img src="assets/imgs/portfolio/ddland/Attraction_운휴.png" alt=""></td>
+                                    <td>
+                                        <ul>
+                                        <li>시스템 날짜 기준, 금일 운휴인 어트랙션 목록을 조회할 수 있는 페이지입니다.</li>
+                                        <li>관리자가 운휴로 등록한 어트랙션은 DB에 저장되어, 해당 날짜에 운휴 어트랙션 목록에서 조회가 가능합니다.</li>
+                                        </ul>
+                                    </td>
+                                    </tr>
+                                </table>
+                            </div>
+            
+                            <div class="swiper-slide">
+                                <table class="functions">
+                                    <tr>
+                                    <th colspan="2">Activity - Attraction 상세 페이지</th>
+                                    </tr>
+                                    <tr>
+                                    <td><img src="assets/imgs/portfolio/ddland/어트랙션detail.png" alt=""></td>
+                                    <td>
+                                        <ul>
+                                        <li>선택한 특정 어트랙션의 상세 정보를 조회할 수 있는 페이지입니다.</li>
+                                        <li>관리자가 등록한 다수의 이미지파일은 슬라이드 형태로 조회가 가능합니다.</li>
+                                        <li>하단의 '어트랙션 예약하기' 버튼을 클릭 시, 어트랙션 예약 페이지로 이동합니다.</li>
+                                        </ul>
+                                    </td>
+                                    </tr>
+                                </table>
+                            </div>
+            
+                            <div class="swiper-slide">
+                                <table class="functions">
+                                    <tr>
+                                    <th colspan="2">Activity - Attraction 상세 페이지</th>
+                                    </tr>
+                                    <tr>
+                                    <td><img src="assets/imgs/portfolio/ddland/어트랙션detail2.png" alt=""></td>
+                                    <td>
+                                        <ul>
+                                        <li>선택한 특정 어트랙션의 상세 정보를 조회할 수 있는 페이지입니다.</li>
+                                        <li>관리자가 어트랙션 등록 시 입력한 정보를 DB에 저장하여 출력합니다.</li>
+                                        <li>'운휴일정'의 경우 DB에 저장된 운휴 정보를 확인 후 시스템 날짜 기준으로 운휴 여부를 출력합니다.</li>
+                                        </ul>
+                                    </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <table class="functions">
+                                    <tr>
+                                    <th colspan="2">Activity - Attraction 상세 페이지</th>
+                                    </tr>
+                                    <tr>
+                                    <td><img src="assets/imgs/portfolio/ddland/어트랙션detail3.png" alt=""></td>
+                                    <td>
+                                        <ul>
+                                        <li>선택한 특정 어트랙션의 상세 정보를 조회할 수 있는 페이지입니다.</li>
+                                        <li>카카오맵 Open API를 사용하였습니다.</li>
+                                        </ul>
+                                    </td>
+                                    </tr>
+                                </table>
+                            </div>
+            
+            
+            
+                        </div>
+                        <!-- 기능 구현 슬라이드 네비게이션 버튼 -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+            
+                        <!-- pagination -->
+                        <div class="function-swiper-pagination"></div>
+                    </div>
+                </div>
+      
+                <!-- 산출물 -->
+                <div class="project-desc">
+                    <h3>산출물</h3>
+                    <ul>
+                        <li>기획서</li>
+                        <li>요구분석서 (48장)</li>
+                        <li>순서도</li>
+                        <li>데이터베이스 설계(ERD)</li>
+                        <li>화면 설계서 (133장)</li>
+                        <li>DDL (71장)</li>
+                        <li>DML (182장)</li>
+                        <li>PPT</li>
+                        <li>개발문서</li>
+                        <li>요약본</li>
+                    </ul>
+                    <table id="docs">
+                        <tr>
+                            <th>기획서</th>
+                            <th>요구분석서</th>
+                            <th>순서도</th>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/imgs/portfolio/ddland/기획서작성.PNG" alt=""></td>
+                            <td><img src="assets/imgs/portfolio/ddland/요구분석서작성.PNG" alt=""></td>
+                            <td><img src="assets/imgs/portfolio/ddland/순서도작성.PNG" alt=""></td>
+                        </tr>
+                        <tr>
+                            <th>데이터베이스 설계</th>
+                            <th>화면 설계서</th>
+                            <th>DDL</th>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/imgs/portfolio/ddland/데이터베이스설계.PNG" alt=""></td>
+                            <td><img src="assets/imgs/portfolio/ddland/화면설계서작성.PNG" alt=""></td>
+                            <td><img src="assets/imgs/portfolio/ddland/DDL작성.PNG" alt=""></td>
+                        </tr>
+                        <tr>
+                            <th>DML</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/imgs/portfolio/ddland/DML작성.PNG" alt=""></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+        
+                    <!-- <div class="project-docs">
+                        <div class="row">
+                        <img src="assets/imgs/portfolio/ddland/기획서작성.PNG" alt="">
+                        <img src="assets/imgs/portfolio/ddland/요구분석서작성.PNG" alt="">
+                        <img src="assets/imgs/portfolio/ddland/순서도작성.PNG" alt="">
+                        <img src="assets/imgs/portfolio/ddland/데이터베이스설계.PNG" alt="">
+                        </div>
+                        <div class="row">
+                        <img src="assets/imgs/portfolio/ddland/화면설계서작성.PNG" alt="">
+                        <img src="assets/imgs/portfolio/ddland/DDL작성.PNG" alt="">
+                        <img src="assets/imgs/portfolio/ddland/DML작성.PNG" alt="">
+                        </div>
+                    </div> -->
+                </div>
+        
+                <!-- 개발 과정 -->
+                <div class="project-desc">
+                    <h3>개발 과정</h3>
+                    <ul>
+                        <li>프로젝트 구조 설계</li>
+                        <li>Git 협업</li>
+                        <li>팀 회의</li>
+                    </ul>
+                    <table id="process">
+                        <tr>
+                        <th>프로젝트 구조 설계</th>
+                        <th>Git 협업</th>
+                        <th>팀 회의</th>
+                        </tr>
+                        <tr>
+                        <td><img src="assets/imgs/portfolio/ddland/프로젝트구조설계.PNG" alt=""></td>
+                        <td><img src="assets/imgs/portfolio/ddland/Git협업.PNG" alt=""></td>
+                        <td><img src="assets/imgs/portfolio/ddland/팀회의.PNG" alt=""></td>
+                        </tr>
+                    </table>
+                </div>
+        
+                <!-- 후기 -->
+                <div class="row">
+                    <div class="project-desc">
+                        <h3>후기</h3>
+                        <br>
+                        <h5>느낀점</h5>
+                        <p>Final Project인 스프링 프로젝트를 통해서 그동안의 교육 과정에서 배웠던 모든 내용으로 결과물을 만들어서 가장 재미있게 작업에 임했습니다. 특히 AWS를 통해 배포를 진행하며 내가 정말 웹사이트 하나를 만들었다는 뿌듯함을 크게 느꼈습니다.</p>
+                        <p>협업을 진행하며 팀원과 유사한 기능을 구현하는 경우, 내가 어려움을 느끼는 부분에 대해 팀원들은 어떻게 코드를 작성했는지 비교하며 배울 수 있어서, 혼자 사로 갇힌 생각에서 벗어나 생각해볼 수 있어서 좋은 경험이었습니다.</p>
+                        <br>
+                        <h5>개선사항</h5>
+                        <ol>
+                            <li>Elasticsearch의 형태소 분석을 적극적으로 사용하는 검색 기능 구현</li>
+                            <li>액티비티의 상세 페이지 공간 구성(창에 비해 비어 보이는듯한 느낌)</li>
+                            <li>페이지별로 노출되는 이미지의 크기가 상이 → 이에 따른 이미지 처리</li>
+                        </ol>
+                    </div>
+                </div>
+            </div><!-- end of div.container -->
+        </section><!-- end of project detail section -->
+    </main>
+    
 	<!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
@@ -106,12 +530,18 @@
     <!-- bootstrap 3 affix -->
 	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
 
+    <!-- GLightbox -->
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
 
     <!-- Script -->
     <script>
-
+        
     </script>
 </body>
 </html>

@@ -13,8 +13,18 @@
 
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    
+    <!-- GLightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
     <!-- Bootstrap + Meyawo main styles -->
 	<link rel="stylesheet" href="assets/css/meyawo.css">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
@@ -140,12 +150,13 @@
     <section class="section" id="portfolio">
         <div class="container text-center">
             <p class="section-subtitle">What I Did ?</p>
-            <h6 class="section-title mb-6">Portfolio</h6>
+            <h6 class="section-title">Portfolio</h6>
+            <p class="section-subtitle mb-6">❗클릭 시 프로젝트 상세 정보를 확인할 수 있습니다.</p>
             <!-- row -->
             <div class="row">
                 <!-- DD Land -->
                 <div class="col-md-4">
-                    <a href="portfolio_ddland.html" class="portfolio-card">
+                    <a href="portfolio_ddland.html" class="portfolio-card" data-glightbox="type: external" title="클릭 시 프로젝트 상세 정보를 확인할 수 있습니다.">
                         <img src="assets/imgs/portfolio/SpringProject+details.png" class="portfolio-card-img">    
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
@@ -429,6 +440,8 @@
             </div>
         </footer>
     </div> <!-- end of page footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 	
 	<!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
@@ -437,8 +450,19 @@
     <!-- bootstrap 3 affix -->
 	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
 
+    <!-- GLightbox -->
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
+
+    <!-- Script -->
+    <script>
+        
+    </script>
 
 </body>
 </html>
