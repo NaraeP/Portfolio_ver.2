@@ -11209,6 +11209,10 @@ p {
   margin: 5px;
 }
 
+.service-card p img {
+  width: calc(13px + (15 - 13) * ((100vw - 300px) / (1300 - 300)));
+}
+
 .service-card .body {
   padding: 10px;
 }
@@ -12304,6 +12308,9 @@ pre .code {
     margin: auto;
     margin-bottom: 20px;
   }
+  .profile-wrapper p {
+    text-align: left;
+  }
 }
 
 /* sections */
@@ -12537,6 +12544,11 @@ table.functions img {
   border: 2px solid #695AA6;
 }
 
+.education .education-item h6,
+.experience .expeprience-item h6 {
+  font-weight: 600;
+  font-size: calc(15px + (15 - 13) * ((100vw - 300px) / (1300 - 300)));
+}
 
 .experience .expeprience-item span,
 .education .education-item span {
