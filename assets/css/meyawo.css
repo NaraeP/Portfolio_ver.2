@@ -12488,6 +12488,69 @@ table.functions img {
 }
 
 /*--------------------------------------------------------------
+# About Me
+--------------------------------------------------------------*/
+.profile-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-wrapper span {
+  display: inline-block;
+  background: #E9DFE9;
+  padding: 2px 5px;
+  font-weight: 600;
+  color: #695AA6;
+  border-radius: 3px;
+}
+
+/*--------------------------------------------------------------
+# CV
+--------------------------------------------------------------*/
+.education,
+.experience {
+  text-align: start;
+}
+
+.education .education-item,
+.experience .expeprience-item {
+  padding: 0 0 20px 20px;
+  border-left: 2px solid #695AA6;
+  position: relative;
+}
+
+.education .education-item:last-child,
+.experience .expeprience-item:last-child {
+  padding-bottom: 0;
+}
+
+.education .education-item::before,
+.experience .expeprience-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #FFF;
+  border: 2px solid #695AA6;
+}
+
+
+.experience .expeprience-item span,
+.education .education-item span {
+  font-size: calc(13px + (18 - 15) * ((100vw - 300px) / (1300 - 300)));
+  background: #E9DFE9;
+  padding: 3px 10px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #695AA6;
+  border-radius: 3px;
+}
+
+/*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
 .back-to-top {
